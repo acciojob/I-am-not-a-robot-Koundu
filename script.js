@@ -2,8 +2,8 @@
 min =1;
 max =5;
 var num = Math.floor(Math.random() * (max - min + 1)) + min;
-const verifyBtn = document.querySelector("#visible");
-const resetBtn = document.querySelector("button")
+const verifyBtn = document.querySelector("#verify");
+const resetBtn = document.querySelector("#reset")
 const para = document.getElementById("para");
 var clicked=0;
 var selected=0;
