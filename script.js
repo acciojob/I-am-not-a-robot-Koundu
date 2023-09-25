@@ -2,7 +2,8 @@
 min =1;
 max =5;
 var num = Math.floor(Math.random() * (max - min + 1)) + min;
-const verifyBtn = document.querySelector("button");
+const verifyBtn = document.querySelector("#visible");
+const resetBtn = document.querySelector("button")
 const para = document.getElementById("para");
 var clicked=0;
 var selected=0;
@@ -29,15 +30,22 @@ for(let i=0;i<select.length-1;i++){
 		clicked = (i+1);
 		console.log(i+1);
 		}
-		console.log(isSelected);
 	})
 }
 
 verifyBtn.addEventListener('click',()=>{
-	if(selected === clicked&& isSelected === true){
+	if(isSelected === true){
+		verifyBtn.style.display = "none";
+	if(selected === clicked && isSelected === true){
 		para.innerHTML += "You are a human. Congratulations!.";
-		console.log(selected,clicked)
 	}else{
 		para.innerHTML += "We can't verify you as a human. You selected the non-identical tiles.";
 	}
+	}else{
+		alert("Please Selecte the Images")
+	}
+})
+
+resetBtn.addEventListener('click',()=>{
+		location.reload();
 })
